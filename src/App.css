@@ -36,13 +36,53 @@
     transform: rotate(360deg);
   }
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 .navbar
 {
-  background-color: #70def1 !important;
+  background: rgba(0,0,0,0);
+}
+.navbar-item:hover
+{
+  background-color: #2c2c2c;
+  border-radius: 5px;
 }
 #root
 {
+  
   background-size: cover;
+  background-position: center;
+  height: 100%;
+  background-image: url('https://drive.google.com/uc?export=view&id=1Zr2uc_vh0uXbXhalXtar4bJmYOyzJKuz');
+  background-repeat: repeat-y;
+}
+.logo
+{
+  width: 100px;
+  height: 100px;
+  margin-left: 100px;
+}
+.nav-items
+{
+  margin-right: 100px;
+}
+.lien-he, .trang-chu
+{
   height: 100vh;
-  background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.webp');
 }
