@@ -7,7 +7,7 @@ export default function FooterComponent() {
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
-          
+
         </div>
 
       </section>
@@ -15,9 +15,9 @@ export default function FooterComponent() {
       <section className=''>
         <div className='container text-center text-md-start mt-5'>
           <div className='row mt-3'>
-            <div className='col-md-3 col-lg-4 col-xl-4 mx-auto mb-4'>
+            <div className='font-weight-bold text-uppercase text-dark info-footer-container col-md-3 col-lg-4 col-xl-4 mx-auto mb-4 text-left'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <i className='fas fa-gem me-3'></i>Thông tin
+                <i class="fas fa-gem"></i> Thông tin
                 <h6>______</h6>
               </h6>
               <p>
@@ -76,20 +76,21 @@ export default function FooterComponent() {
               </p>
             </div>*/}
 
-            <div className='col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Fanpage</h6>
+            <div className='col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4 text-left'>
+              <h6 className='text-uppercase fw-bold mb-4'>
+                <i class="fas fa-pager"></i> Fanpage</h6>
               <p className='' style={{}}>
-                <Iframe/>
+                <Iframe />
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2022 Copyright &nbsp;
-        <a target="_blank" className='text-reset fw-bold' href='https://www.facebook.com/PhuKienPhongTamRIWASU'>
-          DOANH NGHIỆP TƯ NHÂN CƠ KHÍ CƯỜNG THỊNH
+      <div className='foter-container text-center text-dark p-4 text-primary' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+
+        <a target="_blank" className='text-primary text-decoration-none' href='https://www.facebook.com/PhuKienPhongTamRIWASU'>
+          © 2022 COPYRIGHT DOANH NGHIỆP TƯ NHÂN CƠ KHÍ CƯỜNG THỊNH
         </a>
       </div>
     </MDBFooter>
