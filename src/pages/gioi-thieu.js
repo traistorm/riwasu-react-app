@@ -32,7 +32,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=12AZ46kh3BZmGBMADnipipjMCjzrJp-cx' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.ibb.co/BjNTYVK/69775172-100125311384002-2883457896538963968-n.png' alt="img" />
                             </div>
 
                         </div>
@@ -51,7 +51,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=12AZ46kh3BZmGBMADnipipjMCjzrJp-cx' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.ibb.co/Dw2hfXg/OS1A0128.jpg' alt="img" />
                             </div>
 
                         </div>
@@ -69,7 +69,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=12AZ46kh3BZmGBMADnipipjMCjzrJp-cx' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.ibb.co/GJ93TWL/21.jpg' alt="img" />
                             </div>
 
                         </div>
@@ -88,7 +88,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=12AZ46kh3BZmGBMADnipipjMCjzrJp-cx' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.ibb.co/ZWwbbjf/16.jpg' alt="img" />
                             </div>
 
                         </div>
@@ -106,7 +106,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=12AZ46kh3BZmGBMADnipipjMCjzrJp-cx' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.ibb.co/hZ9n5Lf/OS1A0174.jpg' alt="img" />
                             </div>
 
                         </div>
