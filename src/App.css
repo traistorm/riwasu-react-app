@@ -315,15 +315,15 @@ example-track-2 {
   }
 
   .sp-status-info {
-    font-size: 15px;
+    font-size: 14px !important;
   }
 
   .sp-sp-info-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .sp-sp-describe-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .sp-sp-describe {
@@ -340,7 +340,7 @@ example-track-2 {
   }
 
   .navbar-toggler-icon {
-    background-image: url(https://drive.google.com/uc?export=view&id=1ZkzHmSYEwGDg7zWH6yjY9zbGJpMCzszE) !important;
+    background-image: url(https://i.ibb.co/tszTZHB/pngwing-com-6.png) !important;
     width: 50px !important;
     height: 50px !important;
   }
@@ -371,8 +371,28 @@ example-track-2 {
   }
   .sp-gt-header
   {
-    font-size: 11px !important;
+    font-size: 16px !important;
     font-weight: bold;
+  }
+  .zalo-logo
+  {
+    bottom: 5px !important;
+    left: 5px !important;
+  }
+  .zalo-logo a img
+  {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .pkpt-item-image
+  {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  .sale-logo
+  {
+    width: 35x !important;
+    height: 35px !important;
   }
 }
 
@@ -390,7 +410,7 @@ example-track-2 {
   }
 
   .sp-status-info {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .sp-sp-info {

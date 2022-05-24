@@ -16,8 +16,8 @@ export default function FooterComponent() {
         <div className='container text-center text-md-start mt-5'>
           <div className='row mt-3'>
             <div className='font-weight-bold text-uppercase text-dark info-footer-container col-md-3 col-lg-4 col-xl-4 mx-auto mb-4 text-left'>
-              <h6 className='text-uppercase fw-bold mb-4'>
-                <i class="fas fa-gem"></i> Thông tin
+              <h6 className='text-uppercase fw-bold mb-4' style={{fontSize : "18px"}}>
+                <i class="far fa-id-badge font-weight-bold mr-1" style={{fontSize : "25px"}}></i> Thông tin liên hệ
                 <h6>______</h6>
               </h6>
               <p>
@@ -77,8 +77,8 @@ export default function FooterComponent() {
             </div>*/}
 
             <div className='col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4 text-left'>
-              <h6 className='text-uppercase fw-bold mb-4'>
-                <i class="fas fa-pager"></i> Fanpage</h6>
+              <h6 className='text-uppercase mb-4 text-dark' style={{fontSize : "18px"}}>
+                <i class="fas fa-pager font-weight-bold mr-1" style={{fontSize : "25px"}}></i> Fanpage</h6>
               <p className='' style={{}}>
                 <Iframe />
               </p>

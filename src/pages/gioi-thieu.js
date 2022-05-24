@@ -32,7 +32,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://i.ibb.co/BjNTYVK/69775172-100125311384002-2883457896538963968-n.png' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.ibb.co/KrzbPpQ/OS1A0091.jpg' alt="img" />
                             </div>
 
                         </div>

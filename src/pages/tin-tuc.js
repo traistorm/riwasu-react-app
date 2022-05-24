@@ -9,20 +9,7 @@ class TinTuc extends React.Component {
   componentDidMount() {
     //const response = await fetch('server-spring-boot-api.herokuapp.com/api/CheckKey111');
     //fetch("server-spring-boot-api.herokuapp.com/api/CheckKey")
-    fetch("http://server-spring-boot-api.herokuapp.com/api/v1/CheckKey")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          //alert(result[0]);
-          this.setState({ jsonArray: result });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          alert(error);
-        }
-      )
+    
   }
 
 
@@ -41,7 +28,7 @@ class TinTuc extends React.Component {
               <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
                   <div className='p-2 zoom-hover d-flex'>
-                    <img src='https://i.ibb.co/k0pbJpm/18.jpg' className='row justify-content-center align-self-center w-100' />
+                    <img src='https://i.ibb.co/5KT7yzJ/46adf6f24afbbba5e2ea.jpg' className='row justify-content-center align-self-center w-100' />
                   </div>
                 </div>
                 <div className='col-lg-9 col-8'>
@@ -64,17 +51,17 @@ class TinTuc extends React.Component {
               <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
                   <div className='p-2 zoom-hover d-flex'>
-                    <img src='https://i.ibb.co/k0pbJpm/18.jpg' className='row justify-content-center align-self-center w-100' />
+                    <img src='https://i.ibb.co/NT9pPdj/istockphoto-1168780545-170667a.jpg' className='row justify-content-center align-self-center w-100' />
                   </div>
                 </div>
                 <div className='col-lg-9 col-8'>
                   <a className='text-decoration-none' href='#'>
-                    <div style={{ fontSize: "30px" }} className='tt-title font-weight-bold text-primary'>Bồn cầu giá rẻ có đáng mua không?</div>
+                    <div style={{ fontSize: "30px" }} className='tt-title font-weight-bold text-primary'>Cách thiết kế không gian phòng tắm hiện địa 2022</div>
                   </a>
 
                   <div style={{ fontSize: "20px" }} className='tt-content'>
-                    <div>- Liệu chúng ta có lên mua bồn cầu giá rẻ?</div>
-                    <div>- Liệu chúng có thể sử dụng được trong một thời gian dài hay ưu nhược điểm của chúng</div>
+                    <div>- Bạn đang bí ý tưởng thiết kế, làm đẹp phòng tắm?</div>
+                    <div>- Hãy cùng chúng tôi thiết kế, thay đổi điện mọi cho không gian phòng tắm nhà bạn !</div>
                   </div>
                 </div>
               </div>

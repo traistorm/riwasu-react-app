@@ -90,13 +90,17 @@ function SanPhamMacAo(props) {
                   <div>
                     <div className='font-weight-bold sp-sp-name'>{data.name}</div>
                     <div>Thương hiệu : {data.brand}</div>
-                    <div className='text-uppercase'>Giá mới : {newPrice}</div>
-                    <div className='text-uppercase text-danger'><s>Giá cũ : {oldPrice}</s></div>
+                    <div className='d-flex justify-content-start'>
+                      <div className='text-info text-uppercase font-weight-bold'>Giá mới : {newPrice}</div>
+                      <img className='ml-3 sale-logo' style={{width : "50px", height : "50px"}} src='https://i.ibb.co/wK1gDrj/Png-Item-1718303.png' alt='img' />
+                    </div>
+
+                    <div className='text-uppercase text-danger font-weight-bold'><s>Giá cũ : {oldPrice}</s></div>
                     <div>
                       Tình trạng :
-                      <span className={colorStatus}>{" " + data.status}</span>
+                      <span className={colorStatus + " font-weight-bold"}>{" " + data.status}</span>
                     </div>
-                    <div className='text-primary'>Đặt mua : 0989808585 </div>
+                    <div className='text-primary font-weight-bold'>Đặt mua : 0989808585 </div>
                     {/*<QuantityIncrementButton/>
                             <div className='d-flex justify-content-start'>
                               <div className='bg-success p-2 mr-1'>Mua hàng</div>
