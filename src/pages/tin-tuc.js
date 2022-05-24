@@ -41,7 +41,7 @@ class TinTuc extends React.Component {
               <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
                   <div className='p-2 zoom-hover d-flex'>
-                    <img src='https://drive.google.com/uc?export=view&id=1GTgr6CyYtC11-pX8yDZbWOoZSaS5APY0' className='row justify-content-center align-self-center w-100' />
+                    <img src='https://i.ibb.co/k0pbJpm/18.jpg' className='row justify-content-center align-self-center w-100' />
                   </div>
                 </div>
                 <div className='col-lg-9 col-8'>
@@ -64,7 +64,7 @@ class TinTuc extends React.Component {
               <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
                   <div className='p-2 zoom-hover d-flex'>
-                    <img src='https://drive.google.com/uc?export=view&id=1GTgr6CyYtC11-pX8yDZbWOoZSaS5APY0' className='row justify-content-center align-self-center w-100' />
+                    <img src='https://i.ibb.co/k0pbJpm/18.jpg' className='row justify-content-center align-self-center w-100' />
                   </div>
                 </div>
                 <div className='col-lg-9 col-8'>
