@@ -10,6 +10,7 @@ import CarouselPage from '../components/js/TestModule';
 
 const TrangChu = () => {
   const [proudctInSets, setProductInSets] = useState([]);
+  const [retailProducts, setRetailProducts] = useState([]);
   useEffect(() => {
     //alert(id)
     var res;
@@ -22,6 +23,34 @@ const TrangChu = () => {
           //data = result;
 
           setProductInSets(result); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
+          //alert(data.name)
+          //alert(result.length)
+          //alert(this.props.match.params.id);
+          //alert(result[0]);
+          //this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
+          //this.setState({ dataArray: result });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          alert(error);
+        }
+      )
+    //alert(res.name)
+  }, []);
+  useEffect(() => {
+    //alert(id)
+    var res;
+    fetch("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories?page=1&itemsperpage=12")
+      .then(res => res.json())
+      .then(
+        (result) => {
+
+          //alert(result.name)
+          //data = result;
+
+          setRetailProducts(result); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
           //alert(data.name)
           //alert(result.length)
           //alert(this.props.match.params.id);
@@ -66,8 +95,8 @@ const TrangChu = () => {
 
                         <img src={item.imagelink} className='w-100' />
                         <div className='text-uppercase text-center font-weight-bold'>{item.name}</div>
-                        <div className='text-uppercase text-center'>{item.newprice}</div>
-                        <div className='text-uppercase text-center text-danger'><s>{item.oldprice}</s></div>
+                        <div className='pk-home-price text-uppercase text-center'>{item.newprice}</div>
+                        <div className='pk-home-price text-uppercase text-center text-danger'><s>{item.oldprice}</s></div>
                       </div>
                     </a>
                   </div>
@@ -88,68 +117,32 @@ const TrangChu = () => {
 
       </div>
 
-      <div className='' >
+      <div className=''>
+        <div className='row justify-content-center'>
+          <div className='col-lg-8 col-12 d-flex align-items-center justify-content-center'>
+            <div className='container'>
+              <div class="row justify-content-center">
+                {retailProducts.map(item => (
+                  <div class="col-lg-3 col-4 mb-5 d-flex align-items-center justify-content-center">
+                    <a className='' href={'phu-kien-phong-tam/san-pham/' + item.id} style={{ textDecoration: 'none', color: "black" }}>
+                      <div className='bpk-home-info bg-light p-2 shake-effect border rounded-3' style={{ borderRadius: "3px"}}>
 
-        <div className='row'>
-
-          <div className='d-flex align-items-center justify-content-center'>
-            <div className='col-lg-8 col-10'>
-              <div class="row justify-content-start">
-                <div class="col-lg-3 col-6 mb-5 d-flex align-items-center justify-content-center">
-                  <a href='phu-kien-phong-tam/san-pham/1' style={{ textDecoration: 'none', color: "black" }}>
-                    <div className='sp-home-info shake-effect bg-light border rounded-3' style={{ borderRadius: "5px" }}>
-
-                      <img src='https://drive.google.com/uc?export=view&id=11w9GLenX8m9uh-yp3RIy4I6koTHIdTVs' className='w-100' />
-                      <div className='font-weight-bold text-uppercase text-center'>Hộp cuộn giấy</div>
-                      <div className='text-uppercase text-center'>1.000.000đ</div>
-                      <div className='text-uppercase text-center text-danger'><s>2.000.000đ</s></div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-3 col-6 mb-5 d-flex align-items-center justify-content-center">
-                  <a href='phu-kien-phong-tam/san-pham/1' style={{ textDecoration: 'none', color: "black" }}>
-                    <div className='sp-home-info shake-effect bg-light border rounded-3' style={{ borderRadius: "5px" }}>
-
-                      <img src='https://drive.google.com/uc?export=view&id=11w9GLenX8m9uh-yp3RIy4I6koTHIdTVs' className='w-100' />
-                      <div className='font-weight-bold text-uppercase text-center'>Hộp cuộn giấy</div>
-                      <div className='text-uppercase text-center'>1.000.000đ</div>
-                      <div className='text-uppercase text-center text-danger'><s>2.000.000đ</s></div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-3 col-6 mb-5 d-flex align-items-center justify-content-center">
-                  <a href='phu-kien-phong-tam/san-pham/1' style={{ textDecoration: 'none', color: "black" }}>
-                    <div className='sp-home-info shake-effect bg-light border rounded-3' style={{ borderRadius: "5px" }}>
-
-                      <img src='https://drive.google.com/uc?export=view&id=11w9GLenX8m9uh-yp3RIy4I6koTHIdTVs' className='w-100' />
-                      <div className='font-weight-bold text-uppercase text-center'>Hộp cuộn giấy</div>
-                      <div className='text-uppercase text-center'>1.000.000đ</div>
-                      <div className='text-uppercase text-center text-danger'><s>2.000.000đ</s></div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-3 col-6 mb-5 d-flex align-items-center justify-content-center">
-                  <a href='phu-kien-phong-tam/san-pham/1' style={{ textDecoration: 'none', color: "black" }}>
-                    <div className='sp-home-info shake-effect bg-light border rounded-3' style={{ borderRadius: "5px" }}>
-
-                      <img src='https://drive.google.com/uc?export=view&id=11w9GLenX8m9uh-yp3RIy4I6koTHIdTVs' className='w-100' />
-                      <div className='font-weight-bold text-uppercase text-center'>Hộp cuộn giấy</div>
-                      <div className='text-uppercase text-center'>1.000.000đ</div>
-                      <div className='text-uppercase text-center text-danger'><s>2.000.000đ</s></div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-3 col-6 mb-5 d-flex align-items-center justify-content-center">
-                  <a href='phu-kien-phong-tam/san-pham/1' style={{ textDecoration: 'none', color: "black" }}>
-                    <div className='sp-home-info shake-effect bg-light border rounded-3' style={{ borderRadius: "5px" }}>
-
-                      <img src='https://drive.google.com/uc?export=view&id=11w9GLenX8m9uh-yp3RIy4I6koTHIdTVs' className='w-100' />
-                      <div className='font-weight-bold text-uppercase text-center'>Hộp cuộn giấy</div>
-                      <div className='text-uppercase text-center'>1.000.000đ</div>
-                      <div className='text-uppercase text-center text-danger'><s>2.000.000đ</s></div>
-                    </div>
-                  </a>
-                </div>
+                        <img src={item.imagelink} className='' style={{ width: "250px", height: "250px" }} />
+                        <div className='text-uppercase text-center font-weight-bold'>{item.name}</div>
+                        <div className='pk-home-price text-uppercase text-center'>{item.newprice.toLocaleString(
+                          undefined, // leave undefined to use the visitor's browser 
+                          // locale or a string like 'en-US' to override it.
+                          { minimumFractionDigits: 0 }
+                        ) + " Đ"}</div>
+                        <div className='pk-home-price text-uppercase text-center text-danger'><s>{item.oldprice.toLocaleString(
+                          undefined, // leave undefined to use the visitor's browser 
+                          // locale or a string like 'en-US' to override it.
+                          { minimumFractionDigits: 0 }
+                        ) + " Đ"}</s></div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

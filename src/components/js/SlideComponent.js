@@ -30,7 +30,7 @@ const SlideComponent = () => {
           <MDBMask overlay="black-light" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive slide-home-title font-weight-bold text-uppercase">COMBO Bộ phụ kiện vuông</h3>
+            <h3 className="slide-info h3-responsive slide-home-title font-weight-bold text-uppercase">COMBO Bộ phụ kiện vuông</h3>
           </MDBCarouselCaption>
         </MDBCarouselItem>
         <MDBCarouselItem itemId="2">
@@ -43,7 +43,7 @@ const SlideComponent = () => {
           <MDBMask overlay="black-strong" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive slide-home-title font-weight-bold text-uppercase">Khay cốc INOX 304</h3>
+            <h3 className="slide-info h3-responsive slide-home-title font-weight-bold text-uppercase">Khay cốc INOX 304</h3>
           </MDBCarouselCaption>
         </MDBCarouselItem>
         <MDBCarouselItem itemId="3">
@@ -56,7 +56,7 @@ const SlideComponent = () => {
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive slide-home-title font-weight-bold text-uppercase">COMBO Bộ phụ kiện chân tiện</h3>
+            <h3 className="slide-info h3-responsive slide-home-title font-weight-bold text-uppercase">COMBO Bộ phụ kiện chân tiện</h3>
           </MDBCarouselCaption>
         </MDBCarouselItem>
         <MDBCarouselItem itemId="4">
@@ -69,7 +69,7 @@ const SlideComponent = () => {
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive slide-home-title font-weight-bold text-uppercase">Hộp giấy INOX 304</h3>
+            <h3 className="slide-info h3-responsive slide-home-title font-weight-bold text-uppercase">Hộp giấy INOX 304</h3>
           </MDBCarouselCaption>
         </MDBCarouselItem>
         <MDBCarouselItem itemId="5">
@@ -82,7 +82,7 @@ const SlideComponent = () => {
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive slide-home-title font-weight-bold text-uppercase">Vắt khăn giàn INOX 304</h3>
+            <h3 className="slide-info h3-responsive slide-home-title font-weight-bold text-uppercase">Vắt khăn giàn INOX 304</h3>
           </MDBCarouselCaption>
         </MDBCarouselItem>
         <MDBCarouselItem itemId="6">
@@ -95,7 +95,7 @@ const SlideComponent = () => {
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive slide-home-title font-weight-bold text-uppercase">Mắc áo INOX 304</h3>
+            <h3 className="slide-info h3-responsive slide-home-title font-weight-bold text-uppercase">Mắc áo INOX 304</h3>
           </MDBCarouselCaption>
         </MDBCarouselItem>
       </MDBCarouselInner>

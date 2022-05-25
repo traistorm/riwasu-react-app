@@ -212,10 +212,12 @@ class MacAo extends React.Component {
                                         {this.state.dataArray.map(item => (
                                             <div class="col-lg-3 col-6 mb-5 d-flex align-items-center justify-content-center">
                                                 <a className='' href={"mac-ao/san-pham/" + item.id} style={{ textDecoration: 'none', color: "black" }}>
-                                                    <div className='shake-effect sp-bg'>
+                                                    <div className='shake-effect sp-bg ma-info p-1'>
 
-                                                        <img src={item.imagelink} className='p-2' style={{ width: "100%", height: "100%" }} />
-                                                        <div className='text-uppercase text-center'>{item.name}</div>
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src={item.imagelink} className='p-2 pkpt-item-image' style={{ width: "250px", height: "250px" }} />
+                                                        </div>
+                                                        <div className='text-uppercase text-center font-weight-bold'>{item.name}</div>
                                                         <h6 className='text-uppercase text-center'>{item.newprice.toLocaleString(
                                                             undefined, // leave undefined to use the visitor's browser 
                                                             // locale or a string like 'en-US' to override it.

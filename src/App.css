@@ -290,12 +290,21 @@ example-track-2 {
 
   .bpk-home-info {
     font-size: 10px;
+    height: 170px;
+  }
+  .pk-home-price
+  {
+    font-size: 10px !important;
+  }
+  .bpk-home-info img
+  {
+    width: 80px !important;
+    height: 80px !important;
   }
 
-  body {
+  body, html{
     overflow-x: hidden;
-    /* Hide horizontal scrollbar */
-  }
+}
 
   .sp-home-info {
     font-size: 10px;
@@ -394,6 +403,24 @@ example-track-2 {
     width: 35x !important;
     height: 35px !important;
   }
+  .ma-info
+  {
+    font-size: 12px;
+    height: 220px;
+  }
+  .slide-info
+  {
+    font-size: 15px !important;
+  }
+  .tt-info
+  {
+    font-size: 10px !important;
+  }
+  .tt-image
+  {
+    width: 100px !important;
+    height: 100px !important;
+  }
 }
 
 @media only screen and (min-width : 600px) {
@@ -406,7 +433,7 @@ example-track-2 {
   }
 
   .sp-home-info {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .sp-status-info {

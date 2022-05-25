@@ -28,7 +28,7 @@ class TinTuc extends React.Component {
               <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
                   <div className='p-2 zoom-hover d-flex'>
-                    <img src='https://i.ibb.co/5KT7yzJ/46adf6f24afbbba5e2ea.jpg' className='row justify-content-center align-self-center w-100' />
+                    <img style={{width : "100px", height : "200px"}} src='https://i.ibb.co/5KT7yzJ/46adf6f24afbbba5e2ea.jpg' className='tt-image row justify-content-center align-self-center w-100' />
                   </div>
                 </div>
                 <div className='col-lg-9 col-8'>
@@ -51,10 +51,10 @@ class TinTuc extends React.Component {
               <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
                   <div className='p-2 zoom-hover d-flex'>
-                    <img src='https://i.ibb.co/NT9pPdj/istockphoto-1168780545-170667a.jpg' className='row justify-content-center align-self-center w-100' />
+                    <img style={{width : "100px", height : "200px"}} src='https://i.ibb.co/NT9pPdj/istockphoto-1168780545-170667a.jpg' className='tt-image row justify-content-center align-self-center' />
                   </div>
                 </div>
-                <div className='col-lg-9 col-8'>
+                <div className='tt-info col-lg-9 col-8'>
                   <a className='text-decoration-none' href='#'>
                     <div style={{ fontSize: "30px" }} className='tt-title font-weight-bold text-primary'>Cách thiết kế không gian phòng tắm hiện địa 2022</div>
                   </a>
