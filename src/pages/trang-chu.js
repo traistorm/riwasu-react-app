@@ -54,8 +54,9 @@ const TrangChu = () => {
                   <div class="col-lg-6 col-4 mb-5 d-flex align-items-center justify-content-center">
                     <a className='' href={'phu-kien-phong-tam/san-pham/' + item.id} style={{ textDecoration: 'none', color: "black" }}>
                       <div className='bpk-home-info bg-light p-2 shake-effect border rounded-3' style={{ borderRadius: "3px" }}>
-
-                        <img src={item.imagelink} className='w-100' />
+                        <div className='d-flex justify-content-center'>
+                          <img className='' style={{ width: "250px", height: "250px" }} src={item.imagelink} alt='img' />
+                        </div>
                         <div className='text-uppercase text-center font-weight-bold'>{item.name}</div>
                         <div className='pk-home-price text-uppercase text-center'>{item.newprice.toLocaleString(
                           undefined, // leave undefined to use the visitor's browser 
@@ -97,7 +98,9 @@ const TrangChu = () => {
                     <a className='' href={'phu-kien-phong-tam/san-pham/' + item.id} style={{ textDecoration: 'none', color: "black" }}>
                       <div className='bpk-home-info bg-light p-2 shake-effect border rounded-3' style={{ borderRadius: "3px" }}>
 
-                        <img src={item.imagelink} className='' style={{ width: "250px", height: "250px" }} />
+                        <div className='d-flex justify-content-center'>
+                          <img className='' style={{ width: "250px", height: "250px" }} src={item.imagelink} alt='img' />
+                        </div>
                         <div className='text-uppercase text-center font-weight-bold'>{item.name}</div>
                         <div className='pk-home-price text-uppercase text-center'>{item.newprice.toLocaleString(
                           undefined, // leave undefined to use the visitor's browser 

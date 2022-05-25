@@ -54,14 +54,7 @@ function SanPham(props) {
           //alert(result[0]);
           //this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
           //this.setState({ dataArray: result });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          alert(error);
-        }
-      )
+        })
     //alert(res.name)
   }, []);
   //const { id } = useParams();
