@@ -14,11 +14,11 @@ const TrangChu = () => {
   const [retailProducts, setRetailProducts] = useState([]);
   useEffect(() => {
     //alert(id)
-    axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/producttype/1")
+    axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories?page=1&itemsperpage=6")
       .then(res => {
         setRetailProducts(res.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
       })
-      
+
   }, []);
   useEffect(() => {
     //alert(id)
@@ -26,7 +26,7 @@ const TrangChu = () => {
       .then(res => {
         setProductInSets(res.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
       })
-      
+
     //alert(res.name)
   }, []);
   return (
@@ -41,7 +41,7 @@ const TrangChu = () => {
       <div className='container mb-5 '>
         <div className='row justify-content-center border-bottom border-info'>
           <div className='col-lg-8 d-flex align-items-center justify-content-center '>
-            <h2 className='sp-home-title rounded-3 border text-uppercase text-light bg-info p-1'>COMBO PHỤ KIỆN</h2>
+            <h2 className='sp-home-title rounded-3 border text-uppercase text-light bg-info p-1 grow' style={{ cursor: "pointer" }}>COMBO PHỤ KIỆN</h2>
           </div>
         </div>
       </div>
@@ -57,8 +57,16 @@ const TrangChu = () => {
 
                         <img src={item.imagelink} className='w-100' />
                         <div className='text-uppercase text-center font-weight-bold'>{item.name}</div>
-                        <div className='pk-home-price text-uppercase text-center'>{item.newprice}</div>
-                        <div className='pk-home-price text-uppercase text-center text-danger'><s>{item.oldprice}</s></div>
+                        <div className='pk-home-price text-uppercase text-center'>{item.newprice.toLocaleString(
+                          undefined, // leave undefined to use the visitor's browser 
+                          // locale or a string like 'en-US' to override it.
+                          { minimumFractionDigits: 0 }
+                        ) + " Đ"}</div>
+                        <div className='pk-home-price text-uppercase text-center text-danger'><s>{item.oldprice.toLocaleString(
+                          undefined, // leave undefined to use the visitor's browser 
+                          // locale or a string like 'en-US' to override it.
+                          { minimumFractionDigits: 0 }
+                        ) + " Đ"}</s></div>
                       </div>
                     </a>
                   </div>
@@ -73,7 +81,7 @@ const TrangChu = () => {
       <div className='container mb-5'>
         <div className='row justify-content-center border-bottom border-info'>
           <div className='col-lg-8 d-flex align-items-center justify-content-center '>
-            <h2 className='sp-home-title rounded-3 border text-uppercase text-light bg-info p-1'>MỘT SỐ SẢN PHẨM BÁN LẺ</h2>
+            <h2 className='sp-home-title rounded-3 border text-uppercase text-light bg-info p-1 grow' style={{ cursor: "pointer" }}>MỘT SỐ SẢN PHẨM BÁN LẺ</h2>
           </div>
         </div>
 
@@ -87,7 +95,7 @@ const TrangChu = () => {
                 {retailProducts.map(item => (
                   <div class="col-lg-3 col-4 mb-5 d-flex align-items-center justify-content-center">
                     <a className='' href={'phu-kien-phong-tam/san-pham/' + item.id} style={{ textDecoration: 'none', color: "black" }}>
-                      <div className='bpk-home-info bg-light p-2 shake-effect border rounded-3' style={{ borderRadius: "3px"}}>
+                      <div className='bpk-home-info bg-light p-2 shake-effect border rounded-3' style={{ borderRadius: "3px" }}>
 
                         <img src={item.imagelink} className='' style={{ width: "250px", height: "250px" }} />
                         <div className='text-uppercase text-center font-weight-bold'>{item.name}</div>

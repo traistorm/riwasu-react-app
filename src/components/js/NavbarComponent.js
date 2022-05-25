@@ -18,10 +18,10 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse bg="light" id="basic-navbar-nav" className='justify-content-end'>
           <Nav className="ms-auto">
-            <Nav.Link className='brighten-item navbar-item text-uppercase' href="/phu-kien-phong-tam" style={{ color: "#ffffff" }}>Phụ kiện phòng tắm</Nav.Link>
-            <Nav.Link className='brighten-item navbar-item text-uppercase' href="/mac-ao" style={{ color: "#ffffff" }}>Mắc áo INOX </Nav.Link>
-            <Nav.Link className='brighten-item navbar-item text-uppercase' href="/gioi-thieu" style={{ color: "#ffffff" }}>Giới thiệu </Nav.Link>
-            <Nav.Link className='brighten-item navbar-item text-uppercase' href="/tin-tuc" style={{ color: "#ffffff" }}>Tin tức </Nav.Link>
+            <Nav.Link className='brighten-item navbar-item text-uppercase font-weight-bold' href="/phu-kien-phong-tam" style={{ color: "#ffffff" }}>Phụ kiện phòng tắm</Nav.Link>
+            <Nav.Link className='brighten-item navbar-item text-uppercase font-weight-bold' href="/mac-ao" style={{ color: "#ffffff" }}>Mắc áo INOX </Nav.Link>
+            <Nav.Link className='brighten-item navbar-item text-uppercase font-weight-bold' href="/gioi-thieu" style={{ color: "#ffffff" }}>Giới thiệu </Nav.Link>
+            <Nav.Link className='brighten-item navbar-item text-uppercase font-weight-bold' href="/tin-tuc" style={{ color: "#ffffff" }}>Tin tức </Nav.Link>
             {/*<NavDropdown title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

@@ -7,9 +7,10 @@ const GioiThieu = () => {
         var res;
         axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/" + 1)
             .then(res => {
+                document.getElementById("root").style.backgroundImage = "url('https://drive.google.com/uc?export=view&id=1QO5WZgwMtKMIhp7Chqk-gElT-dnG40cy')";
                 //alert(res.data.name)
             })
-            
+
         //alert(res.name)
     }, []);
     return (
@@ -19,7 +20,7 @@ const GioiThieu = () => {
                 <div class="col-lg-10 col-11">
                     <div className='row justify-content-center'>
                         <div className='col-lg-12 col-12 mb-3'>
-                            <div class="sp-gt-header d-flex justify-content-center" style={{ fontSize: "35px" }}>
+                            <div class="font-weight-bold sp-gt-header d-flex justify-content-center" style={{ fontSize: "35px" }}>
                                 GIỚI THIỆU VỀ DOANH NGHIỆP TƯ NHÂN CƠ KHÍ CƯỜNG THỊNH
                             </div>
                         </div>
