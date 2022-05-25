@@ -11,16 +11,7 @@ import CarouselPage from '../components/js/TestModule';
 import { useNavigate, useSearchParams, useParams } from "react-router-dom";
 import axios from 'axios';
 
-function Person(props) {
-  return <h2>I'm {props.name}!</h2>;
-}
-
 function SanPham(props) {
-  let navigate = useNavigate();
-  const [c, setc] = useState(1);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [newPrice, setNewPrice] = useState("");
-  const [oldPrice, setOldPrice] = useState("");
   const [data, setData] = useState([]);
   const [colorStatus, setColorStatus] = useState("text-success");
   const { id } = useParams();
@@ -33,20 +24,7 @@ function SanPham(props) {
       .then(result => {
           //alert(result.name)
           //data = result;
-          if (!result.data.status == "Còn hàng") {
-            setColorStatus("text-danger");
-          }
-          //alert(result.newprice)
-          setNewPrice(result.data.newprice.toLocaleString(
-            undefined, // leave undefined to use the visitor's browser 
-            // locale or a string like 'en-US' to override it.
-            { minimumFractionDigits: 0 }
-          ) + " Đ")
-          setOldPrice(result.data.oldprice.toLocaleString(
-            undefined, // leave undefined to use the visitor's browser 
-            // locale or a string like 'en-US' to override it.
-            { minimumFractionDigits: 0 }
-          ) + " Đ")
+          
           setData(result.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
           //alert(data.name)
           //alert(result.length)
@@ -81,10 +59,10 @@ function SanPham(props) {
                     <div className='font-weight-bold sp-sp-name'>{data.name}</div>
                     <div>Thương hiệu : {data.brand}</div>
                     <div className='d-flex justify-content-start'>
-                      <div className='text-info text-uppercase font-weight-bold'>Giá mới : {newPrice}</div>
+                      <div className='text-info text-uppercase font-weight-bold'>Giá mới : {data.newprice}</div>
                       <img className='ml-3 sale-logo' style={{width : "50px", height : "50px"}} src='https://i.ibb.co/wK1gDrj/Png-Item-1718303.png' alt='img' />
                     </div>
-                    <div className='text-uppercase text-danger font-weight-bold'><s>Giá cũ : {oldPrice}</s></div>
+                    <div className='text-uppercase text-danger font-weight-bold'><s>Giá mới : {data.oldprice}</s></div>
                     <div>
                       Tình trạng :
                       <span className={colorStatus + " font-weight-bold"}>{" " + data.status}</span>
