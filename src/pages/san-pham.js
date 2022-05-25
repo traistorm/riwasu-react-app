@@ -82,7 +82,7 @@ function SanPham(props) {
             <div className='row justify-content-center'>
               <div className='col-lg-4 col-12 p-2'>
                 <div className='d-flex justify-content-center'>
-                  <img src={data.imagelink} className='w-100' />
+                  <img style={{width : "300px", height : "300px"}} src={data.imagelink} className='sp-image' />
                 </div>
               </div>
               <div className='sp-status-info col-lg-8 col-12 text-dark mt-2'>
