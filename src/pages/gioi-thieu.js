@@ -1,11 +1,15 @@
 import { Container } from 'mdbreact';
 import React, { Component, useEffect } from 'react';
-
+import axios from 'axios';
 const GioiThieu = () => {
     useEffect(() => {
         //alert(id)
         var res;
-        alert("Test");
+        axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/" + 1)
+            .then(res => {
+                alert(res.data.name)
+            })
+            
         //alert(res.name)
     }, []);
     return (
