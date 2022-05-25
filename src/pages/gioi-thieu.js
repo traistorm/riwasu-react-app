@@ -1,7 +1,34 @@
 import { Container } from 'mdbreact';
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 
 const GioiThieu = () => {
+    useEffect(() => {
+        //alert(id)
+        var res;
+        fetch("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/" + 1)
+            .then(res => res.json())
+            .then(
+                (result) => {
+
+                    //alert(result.name)
+                    //data = result;
+                    
+                    //alert(data.name)
+                    //alert(result.length)
+                    //alert(this.props.match.params.id);
+                    //alert(result[0]);
+                    //this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
+                    //this.setState({ dataArray: result });
+                },
+                // Note: it's important to handle errors here
+                // instead of a catch() block so that we don't swallow
+                // exceptions from actual bugs in components.
+                (error) => {
+                    alert(error);
+                }
+            )
+        //alert(res.name)
+    }, []);
     return (
         <div className='gioi-thieu text-light'>
 
