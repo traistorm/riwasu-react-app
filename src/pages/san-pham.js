@@ -9,6 +9,7 @@ import { MDBRow, MDBCol, MDBContainer } from 'mdbreact';
 import { MDBRipple } from 'mdb-react-ui-kit';
 import CarouselPage from '../components/js/TestModule';
 import { useNavigate, useSearchParams, useParams } from "react-router-dom";
+import axios from 'axios';
 
 function Person(props) {
   return <h2>I'm {props.name}!</h2>;
@@ -28,29 +29,25 @@ function SanPham(props) {
   // Có thể tạo nhiều hơn 1 useEffect trong function, tuỳ theo điều kiện callback [], [fullname] mà nó sẽ gọi hàm trong cái useEffect đó 1 hoặc nhiều lần
   useEffect(() => {
     //alert(id)
-    var res;
-    fetch("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/" + id)
-      .then(res => res.json())
-      .then(
-        (result) => {
-
+    axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/" + id)
+      .then(result => {
           //alert(result.name)
           //data = result;
-          if (!result.status == "Còn hàng") {
+          if (!result.data.status == "Còn hàng") {
             setColorStatus("text-danger");
           }
           //alert(result.newprice)
-          setNewPrice(result.newprice.toLocaleString(
+          setNewPrice(result.data.newprice.toLocaleString(
             undefined, // leave undefined to use the visitor's browser 
             // locale or a string like 'en-US' to override it.
             { minimumFractionDigits: 0 }
           ) + " Đ")
-          setOldPrice(result.oldprice.toLocaleString(
+          setOldPrice(result.data.oldprice.toLocaleString(
             undefined, // leave undefined to use the visitor's browser 
             // locale or a string like 'en-US' to override it.
             { minimumFractionDigits: 0 }
           ) + " Đ")
-          setData(result); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
+          setData(result.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
           //alert(data.name)
           //alert(result.length)
           //alert(this.props.match.params.id);

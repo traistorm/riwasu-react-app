@@ -21,6 +21,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import axios from 'axios';
 
 
 class MacAo extends React.Component {
@@ -40,14 +41,13 @@ class MacAo extends React.Component {
 
 
         //alert(searchParams.get("test"));
-        fetch("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=1&itemsperpage=12")
-            .then(res => res.json())
+        axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=1&itemsperpage=12")
             .then(
                 (result) => {
                     //alert(this.props.match.params.id);
                     //alert(result[0]);
-                    this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
-                    this.setState({ dataArray: result });
+                    this.setState({ maxPage: Math.floor(result.data.length / this.state.itemsPerPage) + 1 });
+                    this.setState({ dataArray: result.data });
                 },
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow
@@ -66,20 +66,16 @@ class MacAo extends React.Component {
             let result;
             this.setState({ currentPage: 1 });
             this.setState({ isFilter: true });
-            fetch("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=" + this.state.currentPage + "&minRange=" + minRange + "&maxRange="
+            axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=" + this.state.currentPage + "&minRange=" + minRange + "&maxRange="
                 + maxRange + "&sortType=" + this.state.sortType + "&itemsperpage=" + this.state.itemsPerPage)
-                .then(res => {
-                    this.state.statusCodeReturn = res.status;
-                    return res.json()
-                })
                 .then(
                     (result) => {
                         //alert(this.props.match.params.id);
                         //alert(result[0]);
                         //alert(result.length);
                         //alert(this.state.statusCodeReturn);
-                        this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
-                        this.setState({ dataArray: result });
+                        this.setState({ maxPage: Math.floor(result.data.length / this.state.itemsPerPage) + 1 });
+                        this.setState({ dataArray: result.data });
                         //alert(this.state.dataArray.length);
                         //alert(this.state.maxPage);
                         this.forceUpdate();
@@ -100,13 +96,12 @@ class MacAo extends React.Component {
             this.setState({ currentPage: newPage });
             alert(newPage)
             if (!this.state.isFilter) {
-                fetch("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=" + newPage + "&itemsperpage=12")
-                    .then(res => res.json())
+                axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=" + newPage + "&itemsperpage=12")
                     .then(
                         (result) => {
                             //alert(this.props.match.params.id);
                             //alert(result[0]);
-                            this.setState({ dataArray: result });
+                            this.setState({ dataArray: result.data });
                             this.forceUpdate();
                         },
                         // Note: it's important to handle errors here
@@ -125,20 +120,16 @@ class MacAo extends React.Component {
                 this.setState({ currentPage: newPage });
                 this.setState({ isFilter: true });
 
-                fetch("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=" + newPage + "&minRange=" + minRange + "&maxRange="
+                axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=" + newPage + "&minRange=" + minRange + "&maxRange="
                     + maxRange + "&sortType=" + this.state.sortType + "&itemsperpage=" + this.state.itemsPerPage)
-                    .then(res => {
-                        this.state.statusCodeReturn = res.status;
-                        return res.json()
-                    })
                     .then(
                         (result) => {
                             //alert(this.props.match.params.id);
                             //alert(result[0]);
                             //alert(result.length);
                             //alert(this.state.statusCodeReturn);
-                            this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
-                            this.setState({ dataArray: result });
+                            this.setState({ maxPage: Math.floor(result.data.length / this.state.itemsPerPage) + 1 });
+                            this.setState({ dataArray: result.data });
                             //alert(this.state.dataArray.length);
                             //alert(this.state.maxPage);
                             this.forceUpdate();

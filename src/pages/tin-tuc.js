@@ -28,7 +28,7 @@ class TinTuc extends React.Component {
               <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
                   <div className='p-2 zoom-hover d-flex'>
-                    <img style={{width : "100px", height : "200px"}} src='https://i.ibb.co/5KT7yzJ/46adf6f24afbbba5e2ea.jpg' className='tt-image row justify-content-center align-self-center w-100' />
+                    <img style={{width : "100px", height : "200px"}} src='https://drive.google.com/uc?export=view&id=1QoYWqLgdIdA9GVR7RQssp24WOIRaRW34' className='tt-image row justify-content-center align-self-center w-100' />
                   </div>
                 </div>
                 <div className='col-lg-9 col-8'>
@@ -51,7 +51,7 @@ class TinTuc extends React.Component {
               <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
                   <div className='p-2 zoom-hover d-flex'>
-                    <img style={{width : "100px", height : "200px"}} src='https://i.ibb.co/NT9pPdj/istockphoto-1168780545-170667a.jpg' className='tt-image row justify-content-center align-self-center' />
+                    <img style={{width : "100px", height : "200px"}} src='https://drive.google.com/uc?export=view&id=1MrPsmPYlzGkJ9X5Y443z1c7VJJjhut6_' className='tt-image row justify-content-center align-self-center' />
                   </div>
                 </div>
                 <div className='tt-info col-lg-9 col-8'>

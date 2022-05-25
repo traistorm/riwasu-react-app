@@ -7,64 +7,26 @@ import { MDBCard, MDBCardImage, MDBCardText, MDBCardBody } from 'mdbreact';
 import { MDBRow, MDBCol, MDBContainer } from 'mdbreact';
 import { MDBRipple } from 'mdb-react-ui-kit';
 import CarouselPage from '../components/js/TestModule';
+import axios from 'axios';
 
 const TrangChu = () => {
   const [proudctInSets, setProductInSets] = useState([]);
   const [retailProducts, setRetailProducts] = useState([]);
   useEffect(() => {
     //alert(id)
-    var res;
-    fetch("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/producttype/2")
-      .then(res => res.json())
-      .then(
-        (result) => {
-
-          //alert(result.name)
-          //data = result;
-
-          setProductInSets(result); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
-          //alert(data.name)
-          //alert(result.length)
-          //alert(this.props.match.params.id);
-          //alert(result[0]);
-          //this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
-          //this.setState({ dataArray: result });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          alert(error);
-        }
-      )
-    //alert(res.name)
+    axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/producttype/1")
+      .then(res => {
+        setRetailProducts(res.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
+      })
+      
   }, []);
   useEffect(() => {
     //alert(id)
-    var res;
-    fetch("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories?page=1&itemsperpage=12")
-      .then(res => res.json())
-      .then(
-        (result) => {
-
-          //alert(result.name)
-          //data = result;
-
-          setRetailProducts(result); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
-          //alert(data.name)
-          //alert(result.length)
-          //alert(this.props.match.params.id);
-          //alert(result[0]);
-          //this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
-          //this.setState({ dataArray: result });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          alert(error);
-        }
-      )
+    axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/producttype/2")
+      .then(res => {
+        setProductInSets(res.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
+      })
+      
     //alert(res.name)
   }, []);
   return (
