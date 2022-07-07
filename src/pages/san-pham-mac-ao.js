@@ -16,11 +16,8 @@ function Person(props) {
 }
 
 function SanPhamMacAo(props) {
-  let navigate = useNavigate();
-  const [c, setc] = useState(1);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [newPrice, setNewPrice] = useState("");
-  const [oldPrice, setOldPrice] = useState("");
+  const [newPrice, setNewPrice] = useState(100000);
+  const [oldPrice, setOldPrice] = useState(100000);
   const [data, setData] = useState([]);
   const [colorStatus, setColorStatus] = useState("text-success");
   const { id } = useParams();
@@ -38,16 +35,8 @@ function SanPhamMacAo(props) {
           setColorStatus("text-danger");
         }
         //alert(result.newprice)
-        setNewPrice(result.data.newprice.toLocaleString(
-          undefined, // leave undefined to use the visitor's browser 
-          // locale or a string like 'en-US' to override it.
-          { minimumFractionDigits: 0 }
-        ) + " Đ")
-        setOldPrice(result.data.oldprice.toLocaleString(
-          undefined, // leave undefined to use the visitor's browser 
-          // locale or a string like 'en-US' to override it.
-          { minimumFractionDigits: 0 }
-        ) + " Đ")
+        setNewPrice(result.data.newprice);
+        setOldPrice(result.data.oldprice);
         setData(result.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
         //alert(data.name)
         //alert(result.length)
@@ -73,7 +62,7 @@ function SanPhamMacAo(props) {
             <div className='row justify-content-center'>
               <div className='col-lg-4 col-12 p-2'>
                 <div className='d-flex justify-content-center'>
-                  <img src={data.imagelink} className='w-100' />
+                <img style={{ width: "300px", height: "300px" }} src={data.imagelink} className='sp-image' />
                 </div>
               </div>
               <div className='sp-status-info col-lg-8 col-12 text-dark mt-2'>
@@ -82,11 +71,15 @@ function SanPhamMacAo(props) {
                     <div className='font-weight-bold sp-sp-name'>{data.name}</div>
                     <div>Thương hiệu : {data.brand}</div>
                     <div className='d-flex justify-content-start'>
-                      <div className='text-info text-uppercase font-weight-bold'>Giá mới : {newPrice}</div>
-                      <img className='ml-3 sale-logo' style={{ width: "50px", height: "50px" }} src='https://i.ibb.co/wK1gDrj/Png-Item-1718303.png' alt='img' />
+                      <div className='text-info text-uppercase font-weight-bold'>Giá : {newPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
+                      <img className='ml-3 sale-logo' style={{ width: "50px", height: "50px" }} src='https://i.imgur.com/Urc7Cey.png' alt='img' />
                     </div>
-
-                    <div className='text-uppercase text-danger font-weight-bold'><s>Giá cũ : {oldPrice}</s></div>
+                    <div>
+                      Tình trạng :
+                      <span className={colorStatus + " font-weight-bold"}>{" " + data.status}</span>
+                    </div>
+                    <div className='text-primary font-weight-bold'>Đặt mua : 0989808585 </div>
+                    {/*<div className='text-uppercase text-danger font-weight-bold'><s>Giá cũ : {oldPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</s></div>
                     <div>
                       Tình trạng :
                       <span className={colorStatus + " font-weight-bold"}>{" " + data.status}</span>

@@ -1,77 +1,50 @@
-import React, { Component } from 'react';
-class TinTuc extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      jsonArray: []
-    };
-  }
-  componentDidMount() {
-    //const response = await fetch('server-spring-boot-api.herokuapp.com/api/CheckKey111');
-    //fetch("server-spring-boot-api.herokuapp.com/api/CheckKey")
-    
-  }
+import React, { Component, useEffect, useState } from 'react';
+import axios from 'axios';
+function TinTuc(props) {
+  const [newsData, setNewsData] = useState([]);
+  useEffect(() => {
+    //alert(id)
+    axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/news?page=1&itemsperpage=6")
+      .then(res => {
+        setNewsData(res.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
+      })
 
-
-  render() {
-
-    return (
-      /*<div>
-        {this.state.jsonArray.map(item => (
-            <div>{item.id}</div>
-          ))}
-      </div>*/
-      <div className='container'>
-        <div className='row justify-content-center mb-3'>
-          <div className='col-lg-12 col-11'>
-            <div className=''>
-              <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
+  }, []);
+  return (
+    /*<div>
+      {this.state.jsonArray.map(item => (
+          <div>{item.id}</div>
+        ))}
+    </div>*/
+    <div className='container'>
+      <div className='row justify-content-center mb-3'>
+        <div className='col-lg-12 col-11'>
+          <div className=''>
+            {newsData.map(item => (
+              <div className='row tin-tuc-bg mt-3' style={{ borderRadius: "5px" }}>
                 <div className='col-lg-3 col-4'>
-                  <div className='p-2 zoom-hover d-flex'>
-                    <img style={{width : "100px", height : "200px"}} src='https://drive.google.com/uc?export=view&id=1QoYWqLgdIdA9GVR7RQssp24WOIRaRW34' className='tt-image row justify-content-center align-self-center w-100' />
+                  <div className='p-2 zoom-hover d-flex justify-content-center'>
+                    <img style={{ width: "250px", height: "250px" }} src={item.imagelink} className='tt-image ' />
                   </div>
                 </div>
                 <div className='col-lg-9 col-8'>
-                  <a className='text-decoration-none' href='#'>
-                    <div style={{ fontSize: "30px" }} className='tt-title font-weight-bold text-primary'>Bồn cầu giá rẻ có đáng mua không?</div>
+                  <a className='text-decoration-none' href={"tin-tuc-noi-dung/" + item.id}>
+                    <div style={{ fontSize: "25px" }} className='tt-title font-weight-bold text-primary'>{item.title}</div>
                   </a>
 
-                  <div style={{ fontSize: "20px" }} className='tt-content'>
-                    <div>- Liệu chúng ta có lên mua bồn cầu giá rẻ?</div>
-                    <div>- Liệu chúng có thể sử dụng được trong một thời gian dài hay ưu nhược điểm của chúng</div>
+                  <div style={{ fontSize: "16px" }} className='tt-content'>
+                    {item.describe}
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className='row justify-content-center mb-3'>
-          <div className='col-lg-12 col-11'>
-            <div className=''>
-              <div className='row tin-tuc-bg' style={{ borderRadius: "5px" }}>
-                <div className='col-lg-3 col-4'>
-                  <div className='p-2 zoom-hover d-flex'>
-                    <img style={{width : "100px", height : "200px"}} src='https://drive.google.com/uc?export=view&id=1MrPsmPYlzGkJ9X5Y443z1c7VJJjhut6_' className='tt-image row justify-content-center align-self-center' />
-                  </div>
-                </div>
-                <div className='tt-info col-lg-9 col-8'>
-                  <a className='text-decoration-none' href='#'>
-                    <div style={{ fontSize: "30px" }} className='tt-title font-weight-bold text-primary'>Cách thiết kế không gian phòng tắm hiện địa 2022</div>
-                  </a>
+            ))}
 
-                  <div style={{ fontSize: "20px" }} className='tt-content'>
-                    <div>- Bạn đang bí ý tưởng thiết kế, làm đẹp phòng tắm?</div>
-                    <div>- Hãy cùng chúng tôi thiết kế, thay đổi điện mọi cho không gian phòng tắm nhà bạn !</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
           </div>
         </div>
       </div>
 
-    )
-  }
+    </div>
+
+  )
 }
 export default TinTuc;

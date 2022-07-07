@@ -71,7 +71,7 @@
   background-size: cover;
   background-position: center;
   height: 100%;
-  background-image: url('https://drive.google.com/uc?export=view&id=1HgHZxV0aqwlOogB9VhQw-C5hvTfeGbDd');
+  background-image: url('https://i.imgur.com/Pw8q9P6.jpg');
   background-repeat: repeat-y;
 }
 
@@ -251,14 +251,14 @@ example-track-2 {
   border-radius: 5px;
 }
 
-.navbar-toggler-icon {
-  background-image: url(https://drive.google.com/uc?export=view&id=1ZkzHmSYEwGDg7zWH6yjY9zbGJpMCzszE) !important;
-  width: 50px !important;
-  height: 50px !important;
-}
 
 .navbar-toggler {
   border: none !important;
+}
+.navbar-toggler-icon {
+  background-image: url(https://i.imgur.com/7DjQ3bf.png) !important;
+  width: 50px !important;
+  height: 50px !important;
 }
 
 /* Reponsive */
@@ -348,11 +348,7 @@ example-track-2 {
     height: 80px;
   }
 
-  .navbar-toggler-icon {
-    background-image: url(https://drive.google.com/uc?export=view&id=1Gwundpqz2Y4dzwEIqUBsrbFaEq9X8BEy) !important;
-    width: 50px !important;
-    height: 50px !important;
-  }
+
 
   .navbar-toggler {
     border: none !important;
@@ -363,9 +359,13 @@ example-track-2 {
   }
 
   .tt-content {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
-
+  .ttnd-img
+  {
+    width: 100px !important;
+    height: 100px !important;
+  }
   .gt-title {
     font-size: 13px !important;
   }
@@ -477,5 +477,16 @@ example-track-2 {
 
   .sp-gt-content {
     font-size: 20px;
+  }
+  .tt-title
+  {
+
+  }
+  .ttnd-content img
+  {
+    width: 300px !important;
+    height: 300px !important;
+    display: block;
+    margin: auto;
   }
 }

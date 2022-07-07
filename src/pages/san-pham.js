@@ -15,24 +15,30 @@ function SanPham(props) {
   const [data, setData] = useState([]);
   const [colorStatus, setColorStatus] = useState("text-success");
   const { id } = useParams();
-
+  const [newPrice, setNewPrice] = useState(100000);
+  const [oldPrice, setOldPrice] = useState(100000);
   //alert(fullName);
   // Có thể tạo nhiều hơn 1 useEffect trong function, tuỳ theo điều kiện callback [], [fullname] mà nó sẽ gọi hàm trong cái useEffect đó 1 hoặc nhiều lần
   useEffect(() => {
     //alert(id)
     axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/" + id)
       .then(result => {
-          //alert(result.name)
-          //data = result;
-          
-          setData(result.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
-          //alert(data.name)
-          //alert(result.length)
-          //alert(this.props.match.params.id);
-          //alert(result[0]);
-          //this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
-          //this.setState({ dataArray: result });
-        })
+        //alert(result.name)
+        //data = result;
+        //alert(result.data.newprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        if (!result.data.status == "Còn hàng") {
+          setColorStatus("text-danger");
+        }
+        setNewPrice(result.data.newprice);
+        setOldPrice(result.data.oldprice);
+        setData(result.data); // Gọi Set Data, khi đó data sẽ thay đổi và nó sẽ gọi lại cái use Effect set Data bên trên
+        //alert(data.name)
+        //alert(result.length)
+        //alert(this.props.match.params.id);
+        //alert(result[0]);
+        //this.setState({ maxPage: Math.floor(result.length / this.state.itemsPerPage) + 1 });
+        //this.setState({ dataArray: result });
+      })
     //alert(res.name)
   }, []);
   //const { id } = useParams();
@@ -50,7 +56,7 @@ function SanPham(props) {
             <div className='row justify-content-center'>
               <div className='col-lg-4 col-12 p-2'>
                 <div className='d-flex justify-content-center'>
-                  <img style={{width : "300px", height : "300px"}} src={data.imagelink} className='sp-image' />
+                  <img style={{ width: "300px", height: "300px" }} src={data.imagelink} className='sp-image' />
                 </div>
               </div>
               <div className='sp-status-info col-lg-8 col-12 text-dark mt-2'>
@@ -59,10 +65,15 @@ function SanPham(props) {
                     <div className='font-weight-bold sp-sp-name'>{data.name}</div>
                     <div>Thương hiệu : {data.brand}</div>
                     <div className='d-flex justify-content-start'>
-                      <div className='text-info text-uppercase font-weight-bold'>Giá mới : {data.newprice}</div>
-                      <img className='ml-3 sale-logo' style={{width : "50px", height : "50px"}} src='https://i.ibb.co/wK1gDrj/Png-Item-1718303.png' alt='img' />
+                      <div className='text-info text-uppercase font-weight-bold'>Giá : {newPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
+                      <img className='ml-3 sale-logo' style={{ width: "50px", height: "50px" }} src='https://i.imgur.com/Urc7Cey.png' alt='img' />
                     </div>
-                    <div className='text-uppercase text-danger font-weight-bold'><s>Giá mới : {data.oldprice}</s></div>
+                    <div>
+                      Tình trạng :
+                      <span className={colorStatus + " font-weight-bold"}>{" " + data.status}</span>
+                    </div>
+                    <div className='text-primary font-weight-bold'>Đặt mua : 0989808585 </div>
+                    {/*<div className='text-uppercase text-danger font-weight-bold'><s>Giá mới : {oldPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</s></div>
                     <div>
                       Tình trạng :
                       <span className={colorStatus + " font-weight-bold"}>{" " + data.status}</span>

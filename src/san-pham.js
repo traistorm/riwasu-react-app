@@ -91,7 +91,7 @@ function SanPham(props) {
                     <div className='font-weight-bold sp-sp-name'>{data.name}</div>
                     <div>Thương hiệu : {data.brand}</div>
                     <div className='text-uppercase'>Giá mới : {newPrice}</div>
-                    <div className='text-uppercase text-danger'><s>Giá cũ : {oldPrice}</s></div>
+                    <div>Giá đại lý</div>
                     <div>
                       Tình trạng :
                       <span className={colorStatus}>{" " + data.status}</span>

@@ -63,11 +63,7 @@ const TrangChu = () => {
                           // locale or a string like 'en-US' to override it.
                           { minimumFractionDigits: 0 }
                         ) + " Đ"}</div>
-                        <div className='pk-home-price text-uppercase text-center text-danger'><s>{item.oldprice.toLocaleString(
-                          undefined, // leave undefined to use the visitor's browser 
-                          // locale or a string like 'en-US' to override it.
-                          { minimumFractionDigits: 0 }
-                        ) + " Đ"}</s></div>
+                        <div className='pk-home-price text-uppercase text-center'>(Giá bán đại lý)</div>
                       </div>
                     </a>
                   </div>
@@ -107,11 +103,7 @@ const TrangChu = () => {
                           // locale or a string like 'en-US' to override it.
                           { minimumFractionDigits: 0 }
                         ) + " Đ"}</div>
-                        <div className='pk-home-price text-uppercase text-center text-danger'><s>{item.oldprice.toLocaleString(
-                          undefined, // leave undefined to use the visitor's browser 
-                          // locale or a string like 'en-US' to override it.
-                          { minimumFractionDigits: 0 }
-                        ) + " Đ"}</s></div>
+                        <div className='pk-home-price text-uppercase text-center'>(Giá bán đại lý)</div>
                       </div>
                     </a>
                   </div>

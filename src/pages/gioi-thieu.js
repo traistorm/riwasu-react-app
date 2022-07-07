@@ -3,11 +3,12 @@ import React, { Component, useEffect } from 'react';
 import axios from 'axios';
 const GioiThieu = () => {
     useEffect(() => {
+        document.getElementById("root").style.backgroundImage = "url('https://i.imgur.com/C8CHkES.jpg')";
         //alert(id)
         var res;
         axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/bathroomaccessories/" + 1)
             .then(res => {
-                document.getElementById("root").style.backgroundImage = "url('https://drive.google.com/uc?export=view&id=1QO5WZgwMtKMIhp7Chqk-gElT-dnG40cy')";
+                
                 //alert(res.data.name)
             })
 
@@ -43,7 +44,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=1MrPsmPYlzGkJ9X5Y443z1c7VJJjhut6_' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.imgur.com/xRz0vEo.jpg' alt="img" />
                             </div>
 
                         </div>
@@ -62,7 +63,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=1mrSduD_ikELcsiW-1Y2jBItA7k6Zo94M' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.imgur.com/DWMFF4j.jpg' alt="img" />
                             </div>
 
                         </div>
@@ -80,7 +81,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=1mrSduD_ikELcsiW-1Y2jBItA7k6Zo94M' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.imgur.com/9A2FT3W.jpg' alt="img" />
                             </div>
 
                         </div>
@@ -99,7 +100,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=1mrSduD_ikELcsiW-1Y2jBItA7k6Zo94M' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.imgur.com/Eb1tWJj.jpg' alt="img" />
                             </div>
 
                         </div>
@@ -117,7 +118,7 @@ const GioiThieu = () => {
                         </div>
                         <div className='col-lg-4 col-12 mb-3'>
                             <div class="d-flex justify-content-center">
-                                <img style={{ width: "250px", height: "250px" }} src='https://drive.google.com/uc?export=view&id=1hN0ogNAU76B8KLz-URlpkjggwwZmI4v0' alt="img" />
+                                <img style={{ width: "250px", height: "250px" }} src='https://i.imgur.com/XcBX18q.jpg' alt="img" />
                             </div>
 
                         </div>

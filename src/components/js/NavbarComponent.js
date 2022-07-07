@@ -13,7 +13,7 @@ const NavbarComponent = () => {
       </div>
       <Navbar bg="" expand="lg" className=''>
         <Navbar.Brand href="/">
-          <img className='logo spin' src='https://drive.google.com/uc?export=view&id=1974wNLh3kTFj2nMIsn6HP-sOv26QIcQ9' alt='image' />
+          <img className='logo spin' src='https://i.imgur.com/c8R9XGJ.jpg' alt='image' />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse bg="light" id="basic-navbar-nav" className='justify-content-end'>

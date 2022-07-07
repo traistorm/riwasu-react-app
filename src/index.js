@@ -10,13 +10,13 @@ import MacAo from './pages/mac-ao';
 import TinTuc from "./pages/tin-tuc"
 import SanPham from "./pages/san-pham"
 import SanPhamMacAo from './pages/san-pham-mac-ao';
+import TinTucNoiDung from './pages/tin-tuc-noi-dung';
 import { Container } from "react-bootstrap";
 import "./App.css"
 import NavbarComponent from "./components/js/NavbarComponent"
 import FooterComponent from "./components/js/FooterComponent"
 
 export default function App() {
-  
   return (
     
     <BrowserRouter>
@@ -30,6 +30,7 @@ export default function App() {
               <Route path="/gioi-thieu" element={<GioiThieu />} />
               <Route path="/lien-he" element={<LienHe />} />
               <Route path="/tin-tuc" element={<TinTuc />} />
+              <Route path="/tin-tuc-noi-dung/:id" element={<TinTucNoiDung />} />
               <Route path="*" element={<NoPage />} />
         </Routes>    
         <FooterComponent />

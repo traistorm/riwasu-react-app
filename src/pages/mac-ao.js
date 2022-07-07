@@ -53,7 +53,7 @@ class MacAo extends React.Component {
                 // instead of a catch() block so that we don't swallow
                 // exceptions from actual bugs in components.
                 (error) => {
-                    alert(error);
+                    //alert(error);
                 }
             )
     }
@@ -84,7 +84,7 @@ class MacAo extends React.Component {
                     // instead of a catch() block so that we don't swallow
                     // exceptions from actual bugs in components.
                     (error) => {
-                        alert(error);
+                        //alert(error);
                     }
                 )
             if (this.state.statusCodeReturn == 200) {
@@ -94,7 +94,7 @@ class MacAo extends React.Component {
         }
         const handleChangePage = (event, newPage) => {
             this.setState({ currentPage: newPage });
-            alert(newPage)
+            //alert(newPage)
             if (!this.state.isFilter) {
                 axios.get("https://server-spring-boot-api.herokuapp.com/api/v1/coathanger?page=" + newPage + "&itemsperpage=12")
                     .then(
@@ -108,7 +108,7 @@ class MacAo extends React.Component {
                         // instead of a catch() block so that we don't swallow
                         // exceptions from actual bugs in components.
                         (error) => {
-                            alert(error);
+                           //alert(error);
                         }
                     )
             }
@@ -138,7 +138,7 @@ class MacAo extends React.Component {
                         // instead of a catch() block so that we don't swallow
                         // exceptions from actual bugs in components.
                         (error) => {
-                            alert(error);
+                            //alert(error);
                         }
                     )
                 if (this.state.statusCodeReturn == 200) {
@@ -214,11 +214,7 @@ class MacAo extends React.Component {
                                                             // locale or a string like 'en-US' to override it.
                                                             { minimumFractionDigits: 0 }
                                                         ) + " Đ"}</h6>
-                                                        <h6 className='text-uppercase text-center text-danger'><s>{item.oldprice.toLocaleString(
-                                                            undefined, // leave undefined to use the visitor's browser 
-                                                            // locale or a string like 'en-US' to override it.
-                                                            { minimumFractionDigits: 0 }
-                                                        ) + " Đ"}</s></h6>
+                                                        <div className='pk-home-price text-uppercase text-center'>(Giá bán đại lý)</div>
                                                     </div>
                                                 </a>
 
